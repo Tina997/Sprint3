@@ -52,6 +52,7 @@ public class Activity1Presenter implements Activity1Contract.Presenter {
     public void AddCounter() {
         AllCountersState allCountersState = router.getCounterState();
         model.addCounter(allCountersState.getCuentaS());
+        fetchData();
     }
 
     @Override

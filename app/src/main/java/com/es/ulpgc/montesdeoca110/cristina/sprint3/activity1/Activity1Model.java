@@ -26,7 +26,7 @@ public class Activity1Model implements Activity1Contract.Model {
 
     @Override
     public void addCounter(String cuentaTotal) {
-        CounterItem counterItem = new CounterItem(1,"2","0");
+        CounterItem counterItem = new CounterItem(list.size(),"0","0");
         list.add(counterItem);
     }
 
