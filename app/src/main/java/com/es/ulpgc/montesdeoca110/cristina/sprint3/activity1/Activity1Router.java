@@ -2,6 +2,7 @@ package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity1;
 
 import android.content.Intent;
 import android.content.Context;
+import android.util.Log;
 
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.AllCountersState;
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.AppMediator;
@@ -39,5 +40,16 @@ public class Activity1Router implements Activity1Contract.Router {
     @Override
     public AllCountersState getCounterState() {
         return mediator.getAllCountersState();
+    }
+
+    @Override
+    public Activity1State getActivity1State() {
+        Activity1State state = mediator.getActivity1State();
+        return mediator.getActivity1State();
+    }
+
+    @Override
+    public void setActivity1State(Activity1State state) {
+        mediator.setActivity1State(state);
     }
 }

@@ -16,16 +16,16 @@ public class CounterDetailModel implements CounterDetailContract.Model {
     }
 
     @Override
-    public String fetchData(String data) {
+    public String fetchData(int data) {
         // Log.e(TAG, "fetchData()");
-        this.cuenta = data;
+        this.cuenta = data+"";
         return cuenta;
     }
 
     @Override
     public void updateContador(CounterDetailViewModel viewModel) {
-        viewModel.contador++;
-        this.cuenta = viewModel.contador +"";
-        viewModel.cuenta++;
+        viewModel.counterItem.cuenta++;
+        this.cuenta = viewModel.counterItem.cuenta +"";
+        //viewModel.counterItem.cuentaTotal++;
     }
 }

@@ -1,10 +1,9 @@
 package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity2;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
+
 public class CounterDetailViewModel {
 
-    public int contador;
-    public String data;
-    public String cuentaTotal;
-    public int cuenta;
+    public CounterItem counterItem;
 }
 

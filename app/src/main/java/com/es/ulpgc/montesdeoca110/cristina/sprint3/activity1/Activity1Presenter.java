@@ -1,5 +1,6 @@
 package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity1;
 
+import android.arch.lifecycle.ViewModel;
 import android.util.Log;
 import android.view.View;
 
@@ -41,7 +42,12 @@ public class Activity1Presenter implements Activity1Contract.Presenter {
         // Log.e(TAG, "fetchData()");
 
         // set passed state
+        Activity1State state = router.getActivity1State();
+        if(state!=null){
+            viewModel.counterItems = state.counterItems;
+        }
         viewModel.counterItems = model.fetchData();
+
 
         // update the view
         view.get().displayData(viewModel);
@@ -51,7 +57,10 @@ public class Activity1Presenter implements Activity1Contract.Presenter {
     @Override
     public void AddCounter() {
         AllCountersState allCountersState = router.getCounterState();
-        model.addCounter(allCountersState.getCuentaS());
+        model.addCounter(allCountersState.getCuenta());
+        Activity1State state = (Activity1State) viewModel;
+
+        router.setActivity1State(state);
         fetchData();
     }
 

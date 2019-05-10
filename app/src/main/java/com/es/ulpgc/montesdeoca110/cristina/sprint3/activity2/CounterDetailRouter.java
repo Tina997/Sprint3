@@ -4,6 +4,7 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.AllCountersState;
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.AppMediator;
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
 
@@ -33,5 +34,19 @@ public class CounterDetailRouter implements CounterDetailContract.Router {
     public CounterItem getDataFromPreviousScreen() {
         CounterItem counterItem = mediator.getCounterItem();
         return counterItem;
+    }
+
+    @Override
+    public void setContadorTotal() {
+        AllCountersState countersState = mediator.getAllCountersState();
+        int cuentaAct = countersState.getCuenta();
+        countersState.setCuenta(cuentaAct+1);
+        mediator.setAllCountersState(countersState);
+    }
+
+    @Override
+    public AllCountersState getAllCounterState() {
+        AllCountersState countersState = mediator.getAllCountersState();
+        return countersState;
     }
 }

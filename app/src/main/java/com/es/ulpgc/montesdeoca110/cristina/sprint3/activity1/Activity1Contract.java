@@ -33,7 +33,7 @@ interface Activity1Contract {
 
     interface Model {
         List<CounterItem> fetchData();
-        void addCounter(String cuentaTotal);
+        void addCounter(int cuentaTotal);
     }
 
     interface Router {
@@ -44,5 +44,9 @@ interface Activity1Contract {
         Activity1State getDataFromPreviousScreen();
 
         AllCountersState getCounterState();
+
+        Activity1State getActivity1State();
+
+        void setActivity1State(Activity1State state);
     }
 }

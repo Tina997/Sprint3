@@ -50,7 +50,7 @@ public class Activity1Adapter extends ArrayAdapter<CounterItem> {
         itemView.setOnClickListener(clickListener);
 
         final TextView contentView = itemView.findViewById(R.id.content);
-        contentView.setText(itemList.get(position).cuenta);
+        contentView.setText(itemList.get(position).cuentaS);
 
         return itemView;
     }

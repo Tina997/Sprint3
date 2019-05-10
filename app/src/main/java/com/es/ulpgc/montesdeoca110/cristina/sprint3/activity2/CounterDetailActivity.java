@@ -40,9 +40,9 @@ public class CounterDetailActivity
     @Override
     public void displayData(CounterDetailViewModel viewModel) {
         //Log.e(TAG, "displayData()");
-        if(viewModel.data!=null){
-            ((TextView)findViewById(R.id.counter)).setText(viewModel.contador + "");
-            ((TextView)findViewById(R.id.AllCounter)).setText(viewModel.cuenta + "");
+        if(viewModel.counterItem!=null){
+            ((TextView)findViewById(R.id.counter)).setText(viewModel.counterItem.cuenta + "");
+            ((TextView)findViewById(R.id.AllCounter)).setText(viewModel.counterItem.cuentaTotal + "");
         }
         // deal with the data
         }

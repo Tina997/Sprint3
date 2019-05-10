@@ -6,4 +6,11 @@ public class AllCountersState {
     public String getCuentaS(){
         return cuentaS;
     }
+
+    public int getCuenta() {
+        return cuenta;
+    }
+    public void setCuenta(int cuenta){
+        this.cuenta = cuenta;
+    }
 }

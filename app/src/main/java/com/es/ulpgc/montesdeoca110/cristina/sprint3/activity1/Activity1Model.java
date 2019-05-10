@@ -22,9 +22,10 @@ public class Activity1Model implements Activity1Contract.Model {
         return list;
     }
 
+
     @Override
-    public void addCounter(String cuentaTotal) {
-        CounterItem counterItem = new CounterItem(list.size(),"0",cuentaTotal);
+    public void addCounter(int cuentaTotal) {
+        CounterItem counterItem = new CounterItem(list.size(),0,cuentaTotal);
         list.add(counterItem);
     }
 
