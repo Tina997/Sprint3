@@ -4,5 +4,6 @@ public class CounterDetailViewModel {
 
     public int contador;
     public String data;
+    public String cuentaTotal;
 }
 

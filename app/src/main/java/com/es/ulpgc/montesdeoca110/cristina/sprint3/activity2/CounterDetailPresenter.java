@@ -42,6 +42,7 @@ public class CounterDetailPresenter implements CounterDetailContract.Presenter {
         CounterItem counterItem = router.getDataFromPreviousScreen();
         if(counterItem != null){
             viewModel.data = counterItem.cuenta;
+            viewModel.cuentaTotal = counterItem.cuentaTotal;
         }
         if(viewModel.data != null){
             String data = model.fetchData(viewModel.data);
@@ -55,6 +56,7 @@ public class CounterDetailPresenter implements CounterDetailContract.Presenter {
     @Override
     public void plusContador() {
         model.updateContador(viewModel);
+        fetchData();
     }
 
 

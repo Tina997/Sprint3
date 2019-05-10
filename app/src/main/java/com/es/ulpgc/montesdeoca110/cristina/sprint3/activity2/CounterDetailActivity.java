@@ -41,7 +41,8 @@ public class CounterDetailActivity
     public void displayData(CounterDetailViewModel viewModel) {
         //Log.e(TAG, "displayData()");
         if(viewModel.data!=null){
-            ((TextView)findViewById(R.id.counter)).setText(viewModel.data);
+            ((TextView)findViewById(R.id.counter)).setText(viewModel.contador + "");
+            ((TextView)findViewById(R.id.AllCounter)).setText(viewModel.cuentaTotal);
         }
         // deal with the data
         }

@@ -26,6 +26,5 @@ public class CounterDetailModel implements CounterDetailContract.Model {
     public void updateContador(CounterDetailViewModel viewModel) {
         viewModel.contador++;
         this.cuenta = viewModel.contador +"";
-        viewModel.data = cuenta;
     }
 }
