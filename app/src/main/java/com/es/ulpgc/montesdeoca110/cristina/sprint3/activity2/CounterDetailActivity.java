@@ -42,7 +42,7 @@ public class CounterDetailActivity
         //Log.e(TAG, "displayData()");
         if(viewModel.data!=null){
             ((TextView)findViewById(R.id.counter)).setText(viewModel.contador + "");
-            ((TextView)findViewById(R.id.AllCounter)).setText(viewModel.cuentaTotal);
+            ((TextView)findViewById(R.id.AllCounter)).setText(viewModel.cuenta + "");
         }
         // deal with the data
         }
