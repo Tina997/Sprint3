@@ -1,5 +1,7 @@
 package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity2;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
+
 import java.lang.ref.WeakReference;
 
 interface CounterDetailContract {
@@ -18,10 +20,13 @@ interface CounterDetailContract {
         void injectRouter(Router router);
 
         void fetchData();
+
+        void plusContador();
     }
 
     interface Model {
-        String fetchData();
+        String fetchData(String data);
+        void updateContador(CounterDetailViewModel viewModel);
     }
 
     interface Router {
@@ -29,6 +34,6 @@ interface CounterDetailContract {
 
         void passDataToNextScreen(CounterDetailState state);
 
-        CounterDetailState getDataFromPreviousScreen();
+        CounterItem getDataFromPreviousScreen();
     }
 }

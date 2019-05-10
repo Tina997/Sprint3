@@ -57,11 +57,13 @@ public class Activity1Activity
             @Override
             public void onClick(View v) {
                 CounterItem item = (CounterItem) v.getTag();
+                presenter.selectCounter(item);
             }
         }));
         // deal with the data
     }
 
-    public void goToAddCounter(View view) {presenter.AddCounter();
+    public void goToAddCounter(View view) {
+        presenter.AddCounter();
     }
 }

@@ -3,6 +3,7 @@ package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity2;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.R;
@@ -39,8 +40,13 @@ public class CounterDetailActivity
     @Override
     public void displayData(CounterDetailViewModel viewModel) {
         //Log.e(TAG, "displayData()");
-
+        if(viewModel.data!=null){
+            ((TextView)findViewById(R.id.counter)).setText(viewModel.data);
+        }
         // deal with the data
-        ((TextView) findViewById(R.id.data)).setText(viewModel.data);
+        }
+
+    public void goToPlusCounter(View view) {
+        presenter.plusContador();
     }
 }

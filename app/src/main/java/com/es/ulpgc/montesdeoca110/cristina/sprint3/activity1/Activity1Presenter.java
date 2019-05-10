@@ -1,8 +1,10 @@
 package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity1;
 
 import android.util.Log;
+import android.view.View;
 
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.AllCountersState;
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
 
 import java.lang.ref.WeakReference;
 
@@ -50,6 +52,12 @@ public class Activity1Presenter implements Activity1Contract.Presenter {
     public void AddCounter() {
         AllCountersState allCountersState = router.getCounterState();
         model.addCounter(allCountersState.getCuentaS());
+    }
+
+    @Override
+    public void selectCounter(CounterItem item) {
+        router.passDataToNextScreen(item);
+        router.navigateToNextScreen();
     }
 
 

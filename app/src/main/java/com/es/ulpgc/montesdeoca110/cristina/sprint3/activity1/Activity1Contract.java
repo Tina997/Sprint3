@@ -1,5 +1,7 @@
 package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity1;
 
+import android.view.View;
+
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.AllCountersState;
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
 
@@ -24,6 +26,9 @@ interface Activity1Contract {
         void fetchData();
 
         void AddCounter();
+
+
+        void selectCounter(CounterItem item);
     }
 
     interface Model {
@@ -34,7 +39,7 @@ interface Activity1Contract {
     interface Router {
         void navigateToNextScreen();
 
-        void passDataToNextScreen(Activity1State state);
+        void passDataToNextScreen(CounterItem item);
 
         Activity1State getDataFromPreviousScreen();
 

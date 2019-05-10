@@ -4,6 +4,9 @@ import android.util.Log;
 import android.content.Intent;
 import android.content.Context;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.AppMediator;
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
+
 public class CounterDetailRouter implements CounterDetailContract.Router {
 
     public static String TAG = CounterDetailRouter.class.getSimpleName();
@@ -27,8 +30,8 @@ public class CounterDetailRouter implements CounterDetailContract.Router {
     }
 
     @Override
-    public CounterDetailState getDataFromPreviousScreen() {
-        CounterDetailState state = mediator.getCounterDetailState();
-        return state;
+    public CounterItem getDataFromPreviousScreen() {
+        CounterItem counterItem = mediator.getCounterItem();
+        return counterItem;
     }
 }

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp"
     tools:context=".activity2.CounterDetailActivity">
 
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        tools:text="Hello" />
+        />
     <TextView
         android:id="@+id/AllCounter"
         android:layout_width="match_parent"
@@ -19,5 +20,14 @@
         android:layout_marginTop="50dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:text="Hello" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:clickable="true"
+        android:onClick="goToPlusCounter"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
 
 </FrameLayout>

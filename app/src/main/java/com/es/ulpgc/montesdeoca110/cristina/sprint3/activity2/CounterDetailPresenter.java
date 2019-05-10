@@ -2,6 +2,8 @@ package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity2;
 
 import android.util.Log;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
+
 import java.lang.ref.WeakReference;
 
 public class CounterDetailPresenter implements CounterDetailContract.Presenter {
@@ -37,22 +39,22 @@ public class CounterDetailPresenter implements CounterDetailContract.Presenter {
         // Log.e(TAG, "fetchData()");
 
         // set passed state
-        CounterDetailState state = router.getDataFromPreviousScreen();
-        if (state != null) {
-            viewModel.data = state.data;
+        CounterItem counterItem = router.getDataFromPreviousScreen();
+        if(counterItem != null){
+            viewModel.data = counterItem.cuenta;
         }
-
-        if (viewModel.data == null) {
-            // call the model
-            String data = model.fetchData();
-
-            // set initial state
+        if(viewModel.data != null){
+            String data = model.fetchData(viewModel.data);
             viewModel.data = data;
         }
-
         // update the view
         view.get().displayData(viewModel);
 
+    }
+
+    @Override
+    public void plusContador() {
+        model.updateContador(viewModel);
     }
 
 

@@ -4,6 +4,8 @@ import java.lang.ref.WeakReference;
 
 import android.support.v4.app.FragmentActivity;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.AppMediator;
+
 public class CounterDetailScreen {
 
     public static void configure(CounterDetailContract.View view) {
