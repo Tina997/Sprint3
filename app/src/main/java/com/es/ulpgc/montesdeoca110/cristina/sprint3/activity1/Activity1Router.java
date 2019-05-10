@@ -3,6 +3,7 @@ package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity1;
 import android.content.Intent;
 import android.content.Context;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.AllCountersState;
 import com.es.ulpgc.montesdeoca110.cristina.sprint3.AppMediator;
 
 public class Activity1Router implements Activity1Contract.Router {
@@ -31,5 +32,10 @@ public class Activity1Router implements Activity1Contract.Router {
     public Activity1State getDataFromPreviousScreen() {
         Activity1State state = mediator.getActivity1State();
         return state;
+    }
+
+    @Override
+    public AllCountersState getCounterState() {
+        return getCounterState();
     }
 }

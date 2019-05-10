@@ -1,6 +1,10 @@
 package com.es.ulpgc.montesdeoca110.cristina.sprint3.activity1;
 
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.AllCountersState;
+import com.es.ulpgc.montesdeoca110.cristina.sprint3.CounterItem;
+
 import java.lang.ref.WeakReference;
+import java.util.List;
 
 interface Activity1Contract {
 
@@ -18,10 +22,13 @@ interface Activity1Contract {
         void injectRouter(Router router);
 
         void fetchData();
+
+        void AddCounter();
     }
 
     interface Model {
-        String fetchData();
+        List<CounterItem> fetchData();
+        void addCounter(String cuentaTotal);
     }
 
     interface Router {
@@ -30,5 +37,7 @@ interface Activity1Contract {
         void passDataToNextScreen(Activity1State state);
 
         Activity1State getDataFromPreviousScreen();
+
+        AllCountersState getCounterState();
     }
 }
